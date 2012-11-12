@@ -21,3 +21,4 @@ func Answer(n int) int{
 func main() {
   answer := Answer(100)
   fmt.Println(answer)
+}
