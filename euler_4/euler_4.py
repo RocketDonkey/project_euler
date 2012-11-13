@@ -15,9 +15,8 @@ def MyAnswer():
     s = str(i * i2)
     if s[:3] == s[-1::-1][:3]:
       pals.append(int(s))
-  res = sorted(pals)
 
-  return res[-1]
+  return max(pals)
 
 
 def main():
