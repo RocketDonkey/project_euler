@@ -5,15 +5,15 @@
 What is the sum of the digits of the number 2**1000?
 */
 
-package main
+package euler
 
 import (
-  "math/big"
   "fmt"
+  "math/big"
   "strconv"
   )
 
-func main() {
+func Euler016() string {
   // Allocate new int
   num_str := big.NewInt(2)
 
@@ -32,7 +32,7 @@ func main() {
     total += dig
   }
 
-  // Print total
-  fmt.Println(total)
+  // Return total
+  return fmt.Sprint(total)
 }
 

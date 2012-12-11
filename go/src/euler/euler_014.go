@@ -17,14 +17,14 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
-package main
+package euler
 
 import (
   "fmt"
 )
 
 
-func main() {
+func Euler014() string {
   // Store values and the number of steps it takes to get to 1
   steps_map := make(map[float64]int)
   max_steps := 0
@@ -71,6 +71,5 @@ func main() {
     }
   }
 
-  fmt.Println(high_val)
+  return fmt.Sprint(high_val)
 }
-

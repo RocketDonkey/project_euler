@@ -5,7 +5,7 @@ The series, 11 + 22 + 33 + ... + 1010 = 10405071317.
 Find the last ten digits of the series, 11 + 22 + 33 + ... + 10001000.
 */
 
-package main
+package euler
 
 import (
   "fmt"
@@ -34,7 +34,8 @@ func SumUntil(num int) *big.Int {
   return sum
 }
 
-func main() {
+func Euler048() string {
   sum_str := SumUntil(1000).String()
-  fmt.Println(sum_str[len(sum_str)-10:])
+  //fmt.Println(sum_str[len(sum_str)-10:])
+  return fmt.Sprint(sum_str[len(sum_str)-10:])
 }

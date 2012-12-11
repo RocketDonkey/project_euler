@@ -12,7 +12,7 @@ numbers and the square of the sum is 3025-385 = 2640.
 Find the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum.
 */
-package main
+package euler
 
 import (
   "fmt"
@@ -32,7 +32,7 @@ func Answer(n int) int{
   return int(square_of_sum - sum_of_squares)
 }
 
-func main() {
-  answer := Answer(100)
-  fmt.Println(answer)
+func Euler006() string {
+  answer := fmt.Sprint(Answer(100))
+  return answer
 }

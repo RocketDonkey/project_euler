@@ -6,28 +6,12 @@ backtracking) to the bottom right corner.
 How many routes are there through a 20x20 grid?
 */
 
-package main
+package euler
 
 import (
   "fmt"
   "math"
 )
-
-// Cache map for Factorial function
-var cache = make(map[float64]float64)
-
-
-// Find the factorial of a number
-func Factorial(num float64) float64 {
-  if num == 1 {
-    return 1
-  } else if c, ok := cache[num]; ok {
-    return c
-  }
-
-  cache[num] = num * Factorial(num - 1)
-  return cache[num]
-}
 
 
 // Return the Central Binomial Coefficient for a number
@@ -40,7 +24,7 @@ func BinomialCoefficient (num float64) float64 {
 }
 
 
-func main() {
+func Euler015() string {
   bc := BinomialCoefficient(float64(20))
-  fmt.Printf("%.0f\n", bc)
+  return fmt.Sprintf("%.0f", bc)
 }

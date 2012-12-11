@@ -3,7 +3,7 @@
 Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 */
 
-package main
+package euler
 
 import (
   "fmt"
@@ -11,7 +11,7 @@ import (
   "math/big"
 )
 
-func main() {
+func Euler013() string {
 num := `37107287533902102798797998220837590246510135740250
   46376937677490009712648124896970078050417018260538
   74324986199524741059474233309513058123726617309629
@@ -122,6 +122,6 @@ num := `37107287533902102798797998220837590246510135740250
     new_num, _ := new(big.Int).SetString(n, 10)
     total = total.Add(total, new_num)
   }
-  // Print the result
-  fmt.Println(total.String()[0:10])
+  // Return the result
+  return fmt.Sprint(total.String()[0:10])
 }
