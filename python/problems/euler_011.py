@@ -38,7 +38,7 @@ num = [
 
 
 
-def main():
+def Euler011():
   """Starting from the top, you only need to look laterally and below,
   at most checking nums to the left, diag-left, down, diag-right right.
   """
@@ -79,7 +79,11 @@ def main():
         prod = reduce(lambda x, y: x * row[i - y], range(1, 4), col)
         max_prod = prod if prod > max_prod else max_prod
 
-  print max_prod
+  return max_prod
+
+
+def main():
+  print Euler011()
 
 
 if __name__ == '__main__':

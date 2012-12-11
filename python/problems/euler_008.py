@@ -3,7 +3,8 @@
 Find the greatest product of five consecutive digits in the 1000-digit number.
 """
 
-def main():
+
+def Euler008():
   num = """73167176531330624919225119674426574742355349194934
   96983520312774506326239578318016984801869478851843
   85861560789112949495459501737958331952853208805511
@@ -41,7 +42,11 @@ def main():
       if end - start < 5:
         break
 
-  print maxer
+  return maxer
+
+
+def main():
+  print Euler008()
 
 
 if __name__ == '__main__':

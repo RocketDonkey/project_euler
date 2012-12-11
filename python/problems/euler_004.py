@@ -9,7 +9,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 from itertools import combinations
 
-def MyAnswer():
+def Euler004():
   pals = []
   for i, i2 in combinations(range(999, 100, -1), 2):
     s = str(i * i2)
@@ -20,7 +20,7 @@ def MyAnswer():
 
 
 def main():
-  print MyAnswer()
+  print Euler004()
 
 
 if __name__ == '__main__':

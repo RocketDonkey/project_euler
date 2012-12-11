@@ -21,16 +21,10 @@ Looks like it can be used recursively but don't think it will save any time.
 
 """
 
-import timeit
 
-
-def BetterAnswer(n):
-  """Suggests recursion. 4*E(n-3) + E(n-6)."""
-  pass
-
-
-def MyAnswer(n):
+def Euler002():
   """Every third number is even."""
+  n = 4000000
   s = 0
   p_prev = 1
   prev = 1
@@ -44,10 +38,7 @@ def MyAnswer(n):
 
 
 def main():
-  print MyAnswer(4000000)
-  mine = timeit.Timer(lambda: MyAnswer(4000000))
-  my_time = mine.timeit(number=1000)
-  print 'My time: {0}'.format(my_time)
+  print Euler002()
 
 
 if __name__ == '__main__':

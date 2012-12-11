@@ -15,7 +15,7 @@ import math
 from itertools import combinations
 
 
-def main():
+def Euler009():
   """The two formulas are a system of equations, which result in:
 
      1000a - ab + 1000b = 500000
@@ -28,7 +28,11 @@ def main():
     # Calculate formula
     if (1000*s[0]) - (s[0]*s[1]) + (1000*s[1]) == 500000:
       a, b, c = s[0], s[1], int(math.sqrt(s[0]**2 + s[1]**2))
-      print 'Nums: {0}, {1}, {2} | Product: {3}'.format(a, b, c, a*b*c)
+      return a*b*c
+
+
+def main():
+  print Euler009()
 
 
 if __name__ == '__main__':

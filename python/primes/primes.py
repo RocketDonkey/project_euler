@@ -1,14 +1,10 @@
-"""Project Euler - Problem 10
+"""Project Euler - Primes
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
-
-Find the sum of all the primes below two million.
+Functions for dealing with primes.
 """
 
-import math
-
-
 def Eratosthenes(n):
+  """ Return the first n primes."""
 
   # Skip all multiples of two since they won't count
   numlist = range(3, n+1, 2)
@@ -23,12 +19,4 @@ def Eratosthenes(n):
         numlist[counter] = 0
         counter += num
     backup += 1
-  return sum([2] + filter(bool, numlist))
-
-
-def main():
-  print Eratosthenes(2000000)
-
-
-if __name__ == '__main__':
-  main()
+  return [2] + [x for x in numlist if x]

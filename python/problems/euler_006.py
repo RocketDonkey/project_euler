@@ -13,7 +13,9 @@ Find the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum.
 """
 
-def MyAnswer(n):
+def Euler006():
+  n = 100
+
   # Square of sums
   square_of_sum = ((n*(n+1))/2)**2
 
@@ -25,7 +27,7 @@ def MyAnswer(n):
 
 
 def main():
-  print MyAnswer(100)
+  print Euler006()
 
 
 if __name__ == '__main__':
